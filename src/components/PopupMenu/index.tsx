@@ -4,9 +4,6 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 
 export default function PopupMenu(){
     const [visible, setVisible] = useState(false);
-    const options = [
-
-    ];
     return(
         <>
             <TouchableOpacity onPress={() => setVisible(true)}>
@@ -18,16 +15,16 @@ export default function PopupMenu(){
                         
                         <View style={styles.popup} >
                             <TouchableOpacity style={styles.menuItem} >
-                                <Text>Perfil</Text>
-                                <Ionicons name="person" size={16} color="#B00202" />
+                                <Text style={styles.itemText} >Perfil</Text>
+                                <Ionicons name="person" size={16} color="white" />
                             </TouchableOpacity>
                             <TouchableOpacity style={styles.menuItem}>
-                                <Text>Configurações</Text>
-                                <Ionicons name="settings" size={16} color="#B00202" />
+                                <Text style={styles.itemText} >Configurações</Text>
+                                <Ionicons name="settings" size={16} color="white" />
                             </TouchableOpacity>
                             <TouchableOpacity style={styles.menuItem}>
-                                <Text>Sair</Text>
-                                <Ionicons name="log-out" size={16} color="#B00202" />
+                                <Text style={styles.itemText} >Sair</Text>
+                                <Ionicons name="log-out" size={16} color="white" />
                             </TouchableOpacity>
                         </View>
 
@@ -41,9 +38,9 @@ export default function PopupMenu(){
 const styles = StyleSheet.create({
     popup: {
         borderWidth: 1,
-        borderColor: "#B00202",
+        borderColor: "white",
         borderRadius: 8,
-        backgroundColor: "white",
+        backgroundColor: "#B00202",
         paddingHorizontal: 10,
         paddingVertical: 5,
         position: "absolute",
@@ -56,5 +53,8 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         alignItems: "center",
         columnGap: 10
+    },
+    itemText: {
+        color: "white"
     }
 });
